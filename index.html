@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Album Theme Music Player</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function playAudio() {
+            var audio = document.getElementById("audioPlayer");
+            audio.play();
+        }
+        function pauseAudio() {
+            var audio = document.getElementById("audioPlayer");
+            audio.pause();
+        }
+        function stopAudio() {
+            var audio = document.getElementById("audioPlayer");
+            audio.pause();
+            audio.currentTime = 0;
+        }
+        function changeTrack(track) {
+            var audio = document.getElementById("audioPlayer");
+            var source = document.getElementById("audioSource");
+            source.src = track.getAttribute("data-src");
+            audio.load();
+            audio.play();
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="card border-0 shadow my-5">
+                    <div class="card-body p-5">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="https://cdn.discordapp.com/attachments/1094079348253933568/1094559473001058384/e012a0379fb16413.png" alt="Album Cover" class="img-fluid">
+                            </div>
+                            <div class="col-md-9">
+                                <h1 class="mb-4">กลิ่นดอกไม้</h1>
+                                <p class="mb-4">กลิ่นดอกไม้ - Newery [Official Audio]</p>
+                                <audio id="audioPlayer" controls>
+                                    <source id="audioSource" src="https://drive.google.com/uc?export=download&id=1v6D84a-5hAYoSYMqqlN96gewNA8d33oX" type="audio/mpeg">
+                                </audio>
+                                <div class="btn-group" role="group" aria-label="Audio Player">
+                                    <button type="button" class="btn btn-outline-secondary" id="btnPlay" onclick="playAudio()"><i class="fa fa-play"></i></button>
+                                    <button type="button" class="btn btn-outline-secondary" id="btnPause" onclick="pauseAudio()"><i class="fa fa-pause"></i></button>
+                                    <button type="button" class="btn btn-outline-secondary" id="btnStop" onclick="stopAudio()"><i class="fa fa-stop"></i></button>
+                                </div>
+                                <div class="progress mt-3">
+                                    <div class="progress-bar" id="progressBar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-5">
+                            <div class="col-md-12">
+                                <h2 class="mb-4">Track List</h2>
+                                <ul class="list-group">
+                                    <li class="list-group-item"><a href="#" class="track" data-src="https://drive.google.com/uc?export=download&id=1v6D84a-5hAYoSYMqqlN96gewNA8d33oX">กลิ่นดอกไม้
+                                    </a></li>
+                                    <li class="list-group-item"><a href="#" class="track" data-src="https://drive.google.com/uc?export=download&id=1UhmnOnDeadTYAJ4JS6aJWtkRZytwKsVL">ใกล้ (REMIX)</a></li>
+                                    <li class="list-group-item"><a href="#" class="track" data-src="https://drive.google.com/uc?export=download&id=1l4hNOXq71tGpw7Bo_R1RcT9B91JE6oKZ">ไทม์แมชชีน</a></li>
+                                    <li class="list-group-item"><a href="#" class="track" data-src="https://drive.google.com/uc?export=download&id=1DJzrOCdlF0OsyKqKH2YNeOpg2XR8QKuS">เส้นบางๆ</a></li>
+                                    <li class="list-group-item"><a href="#" class="track" data-src="https://drive.google.com/uc?export=download&id=1q--obGzpY_FPEixcjcS2sgywPJ74Dkah">ติกกลิ่น</a></li>
+                                    <li class="list-group-item"><a href="#" class="track" data-src="https://drive.google.com/uc?export=download&id=1eHO2OkTKkcRsyoCwQH3whlDwGio5_Psg">ฟ้าคงเหงาเมื่อไร้เธอ</a></li>
+                                    <li class="list-group-item"><a href="#" class="track" data-src="https://drive.google.com/uc?export=download&id=1cQiBe34XaERAU7MxVGvjWwxvBl03fYi2">ธาตุทองซาวด์</a></li>
+                                    <li class="list-group-item"><a href="#" class="track" data-src="https://drive.google.com/uc?export=download&id=1u6k3Z1KL6WIARaaLI-wULa4LeQJWkfyz">ข้างกาย</a></li>
+                                    <li class="list-group-item"><a href="#" class="track" data-src="https://drive.google.com/uc?export=download&id=1imKFj19ga-ZUYljfqDOApcMRVcXcy-5j">โต๊ะริม</a></li>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $(".track").click(function(){
+            var source = $(this).attr("data-src");
+            $("#audioSource").attr("src", source);
+            $("#audioPlayer").trigger("load");
+            $("#audioPlayer").trigger("play");
+        });
+    });
+</script>
+</body>
+</html>

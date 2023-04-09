@@ -1,0 +1,65 @@
+body {
+    background-color: #e6b3cc;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    padding-top: 100px;
+}
+
+.card {
+    background-color: #ffcccc;
+    border-radius: 30px;
+}
+
+.card-body {
+    border-radius: 30px;
+}
+
+.img-fluid {
+    border-radius: 50%;
+}
+
+.btn-outline-secondary {
+    color: #993366;
+    border-color: #993366;
+    border-radius: 20px;
+}
+
+.btn-outline-secondary:hover {
+    color: #fff;
+    background-color: #993366;
+    border-color: #993366;
+}
+
+.progress-bar {
+    background-color: #993366;
+}
+
+.list-group-item {
+    background-color: #ffcccc;
+    border: none;
+    border-radius: 20px;
+}
+
+.list-group-item:hover {
+    background-color: #993366;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.track {
+    color: #993366;
+}
+
+.track:hover {
+    color: #fff;
+}
+
+.play-btn {
+    margin-left: 10px;
+}
+
+#audioPlayer {
+    display: none;
+}
