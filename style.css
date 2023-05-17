@@ -16,6 +16,7 @@ body {
 .card {
   background-color: #ffcccc;
   border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .card-body {
@@ -58,9 +59,9 @@ body {
 
 .track {
   color: #993366;
-  white-space: nowrap; /* ทำให้ชื่อเพลงไม่ขึ้นบรรทัดใหม่ */
-  overflow: hidden; /* ทำให้ชื่อเพลงที่ยาวมากๆ ไม่แสดงทั้งหมด */
-  text-overflow: ellipsis; /* ทำให้ชื่อเพลงที่ยาวมากๆ แสดง ... เมื่อไม่พอตัวแสดง */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .track:hover {
