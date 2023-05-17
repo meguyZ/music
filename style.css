@@ -58,6 +58,9 @@ body {
 
 .track {
   color: #993366;
+  white-space: nowrap; /* ทำให้ชื่อเพลงไม่ขึ้นบรรทัดใหม่ */
+  overflow: hidden; /* ทำให้ชื่อเพลงที่ยาวมากๆ ไม่แสดงทั้งหมด */
+  text-overflow: ellipsis; /* ทำให้ชื่อเพลงที่ยาวมากๆ แสดง ... เมื่อไม่พอตัวแสดง */
 }
 
 .track:hover {
