@@ -1,69 +1,4 @@
 body {
-    font-family: 'Sriracha', cursive, sans-serif;
-}
-
-.container {
-    padding-top: 100px;
-}
-
-.card {
-    background-color: #ffcccc;
-    border-radius: 30px;
-}
-
-.card-body {
-    border-radius: 30px;
-}
-
-.img-fluid {
-    border-radius: 50%;
-}
-
-.btn-outline-secondary {
-    color: #993366;
-    border-color: #993366;
-    border-radius: 20px;
-}
-
-.btn-outline-secondary:hover {
-    color: #fff;
-    background-color: #993366;
-    border-color: #993366;
-}
-
-.progress-bar {
-    background-color: #993366;
-}
-
-.list-group-item {
-    background-color: #ffcccc;
-    border: none;
-    border-radius: 20px;
-}
-
-.list-group-item:hover {
-    background-color: #993366;
-    color: #fff;
-    border-radius: 20px;
-}
-
-.track {
-    color: #993366;
-}
-
-.track:hover {
-    color: #fff;
-}
-
-.play-btn {
-    margin-left: 10px;
-}
-
-#audioPlayer {
-    display: none;
-}
-
-body {
   font-family: 'Sriracha', cursive, sans-serif;
   margin: 0;
   padding: 0;
@@ -73,19 +8,62 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
-body {
-  font-family: 'Sriracha', cursive, sans-serif;
+
+.container {
+  padding-top: 100px;
+}
+
+.card {
+  background-color: #ffcccc;
+  border-radius: 30px;
 }
 
 .card-body {
   border-radius: 30px;
-  background-color: rgba(255, 204, 204, 0.8); /* ปรับค่าสีพื้นหลังของกรอบเพลง */
+  background-color: rgba(255, 204, 204, 0.8);
+  padding: 20px;
 }
 
-.play-btn {
-  margin-left: 10px;
-  background-color: rgba(255, 255, 255, 0.5); /* ปรับค่าสีพื้นหลังของปุ่มเพลง */
+.img-fluid {
+  border-radius: 50%;
 }
+
+.btn-outline-secondary {
+  color: #993366;
+  border-color: #993366;
+  border-radius: 20px;
+}
+
+.btn-outline-secondary:hover {
+  color: #fff;
+  background-color: #993366;
+  border-color: #993366;
+}
+
+.progress-bar {
+  background-color: #993366;
+}
+
+.list-group-item {
+  background-color: #ffcccc;
+  border: none;
+  border-radius: 20px;
+}
+
+.list-group-item:hover {
+  background-color: #993366;
+  color: #fff;
+  border-radius: 20px;
+}
+
+.track {
+  color: #993366;
+}
+
+.track:hover {
+  color: #fff;
+}
+
 .play-btn {
   margin-left: 10px;
   background-color: rgba(255, 255, 255, 0.5);
@@ -104,25 +82,20 @@ body {
   color: #fff;
 }
 
-.card-body {
-  border-radius: 30px;
-  background-color: rgba(255, 204, 204, 0.8);
-  padding: 20px;
-}
-
-/* เพิ่มไอคอนเป็น Unicode ฟอนต์ */
 .play-btn::before {
   content: "\f04b";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
 }
 
-/* เพิ่มไอคอนของปุ่มหยุดเพลง */
 .pause-btn::before {
   content: "\f04c";
 }
 
-/* เพิ่มไอคอนของปุ่มเริ่มเพลงใหม่ */
 .stop-btn::before {
   content: "\f04d";
+}
+
+#audioPlayer {
+  display: none;
 }
