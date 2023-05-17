@@ -86,3 +86,43 @@ body {
   margin-left: 10px;
   background-color: rgba(255, 255, 255, 0.5); /* ปรับค่าสีพื้นหลังของปุ่มเพลง */
 }
+.play-btn {
+  margin-left: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.play-btn:hover {
+  background-color: rgba(153, 51, 102, 0.8);
+  color: #fff;
+}
+
+.card-body {
+  border-radius: 30px;
+  background-color: rgba(255, 204, 204, 0.8);
+  padding: 20px;
+}
+
+/* เพิ่มไอคอนเป็น Unicode ฟอนต์ */
+.play-btn::before {
+  content: "\f04b";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+/* เพิ่มไอคอนของปุ่มหยุดเพลง */
+.pause-btn::before {
+  content: "\f04c";
+}
+
+/* เพิ่มไอคอนของปุ่มเริ่มเพลงใหม่ */
+.stop-btn::before {
+  content: "\f04d";
+}
