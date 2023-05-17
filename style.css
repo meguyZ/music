@@ -88,7 +88,7 @@ body {
 
 .play-btn::before {
   content: "\f04b";
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Sriracha', cursive, sans-serif;
   font-weight: 900;
 }
 
