@@ -1,105 +1,105 @@
 body {
-  font-family: 'Sriracha', cursive, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-image: url("Fotoram.io.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-.container {
-  padding-top: 100px;
-}
-
-.card {
-  background-color: #ffcccc;
-  border-radius: 30px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.card-body {
-  border-radius: 30px;
-  background-color: rgba(255, 204, 204, 0.8);
-  padding: 20px;
-}
-
-.img-fluid {
-  border-radius: 50%;
-}
-
-.btn-outline-secondary {
-  color: #993366;
-  border-color: #993366;
-  border-radius: 20px;
-}
-
-.btn-outline-secondary:hover {
-  color: #fff;
-  background-color: #993366;
-  border-color: #993366;
-}
-
-.progress-bar {
-  background-color: #993366;
-}
-
-.list-group-item {
-  background-color: #ffcccc;
-  border: none;
-  border-radius: 20px;
-}
-
-.list-group-item:hover {
-  background-color: #993366;
-  color: #fff;
-  border-radius: 20px;
-}
-
-.track {
-  color: #993366;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.track:hover {
-  color: #fff;
-}
-
-.play-btn {
-  margin-left: 10px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.3s ease;
-}
-
-.play-btn:hover {
-  background-color: rgba(153, 51, 102, 0.8);
-  color: #fff;
-}
-
-.play-btn::before {
-  content: "\f04b";
-  font-family: 'Sriracha', cursive, sans-serif;
-  font-weight: 900;
-}
-
-.pause-btn::before {
-  content: "\f04c";
-}
-
-.stop-btn::before {
-  content: "\f04d";
-}
-
-#audioPlayer {
-  display: none;
-}
+    font-family: 'Sriracha', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("Fotoram.io.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+  .container {
+    padding-top: 100px;
+  }
+  
+  .card {
+    background-color: #ffcccc;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-body {
+    border-radius: 30px;
+    background-color: rgba(255, 204, 204, 0.8);
+    padding: 20px;
+  }
+  
+  .img-fluid {
+    border-radius: 50%;
+  }
+  
+  .btn-outline-secondary {
+    color: #993366;
+    border-color: #993366;
+    border-radius: 20px;
+  }
+  
+  .btn-outline-secondary:hover {
+    color: #fff;
+    background-color: #993366;
+    border-color: #993366;
+  }
+  
+  .progress-bar {
+    background-color: #993366;
+  }
+  
+  .list-group-item {
+    background-color: #ffcccc;
+    border: none;
+    border-radius: 20px;
+  }
+  
+  .list-group-item:hover {
+    background-color: #993366;
+    color: #fff;
+    border-radius: 20px;
+  }
+  
+  .track {
+    color: #993366;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .track:hover {
+    color: #fff;
+  }
+  
+  .play-btn {
+    margin-left: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .play-btn:hover {
+    background-color: rgba(153, 51, 102, 0.8);
+    color: #fff;
+  }
+  
+  .play-btn::before {
+    content: "\f04b";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+  }
+  
+  .pause-btn::before {
+    content: "\f04c";
+  }
+  
+  .stop-btn::before {
+    content: "\f04d";
+  }
+  
+  #audioPlayer {
+    display: none;
+  }
