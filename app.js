@@ -69,3 +69,7 @@ playButtons.forEach(btn => {
     audioPlayer.play();
   });
 });
+function playAudio() {
+  audioPlayer.play();
+  btnPlay.classList.add('pause-btn'); // เพิ่มคลาส pause-btn เมื่อกดเล่นเพลง
+  btnPlay.classList.remove('play-btn'); // ลบคลาส play-btn เมื่
