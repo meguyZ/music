@@ -128,3 +128,148 @@
 </body>
 </html>
 <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <style>
+        .chat-container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+
+        .chat-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .chat-header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .chat-header .username {
+            font-weight: bold;
+        }
+
+        .chat-body {
+            height: 300px;
+            overflow-y: auto;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .chat-message {
+            margin-bottom: 10px;
+        }
+
+        .chat-message .message-sender {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .chat-message .message-content {
+            background-color: #f2f2f2;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .chat-message .message-time {
+            font-size: 12px;
+            color: #999;
+        }
+
+        .chat-input {
+            display: flex;
+        }
+
+        .chat-input input[type="text"] {
+            flex: 1;
+            padding: 5px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+
+        .chat-input input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <img id="profilePicture" src="https://cdn.discordapp.com/attachments/1108367300001804360/1110191919558054040/images.jfif" alt="Profile Picture">
+            <div class="username" id="username" contenteditable="true"> ผู้ใช้สักคน:] </div>
+        </div>
+        <div class="chat-body" id="chatBody"></div>
+        <div class="chat-input">
+            <input type="text" id="messageInput" placeholder="พิมพ์ข้อความ...">
+            <input type="submit" value="ส่ง" onclick="sendMessage()">
+        </div>
+    </div>
+
+    <script>
+        function sendMessage() {
+            var username = document.getElementById('username').innerText;
+            var message = document.getElementById('messageInput').value;
+
+            if (message.trim() !== '') {
+                var chatBody = document.getElementById('chatBody');
+
+                var messageElement = document.createElement('div');
+                messageElement.classList.add('chat-message');
+
+                var senderElement = document.createElement('div');
+                senderElement.classList.add('message-sender');
+                senderElement.innerText = username;
+
+                var contentElement = document.createElement('div');
+                contentElement.classList.add('message-content');
+                contentElement.innerText = message;
+
+                var timeElement = document.createElement('div');
+                timeElement.classList.add('message-time');
+                timeElement.innerText = getTime();
+
+                messageElement.appendChild(senderElement);
+                messageElement.appendChild(contentElement);
+                messageElement.appendChild(timeElement);
+
+                chatBody.appendChild(messageElement);
+
+                document.getElementById('messageInput').value = '';
+            }
+        }
+
+        function getTime() {
+            var now = new Date();
+            var thailandTime = new Date(now.getTime() + (7 * 60 * 60 * 1000)); // Add 7 hours for Thailand (GMT+7)
+            var hours = thailandTime.getHours();
+            var minutes = thailandTime.getMinutes();
+            var ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12;
+            hours = hours ? hours : 12;
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            return hours + ':' + minutes + ' ' + ampm + ' (GMT+7)';
+        }
+    </script>
+</body>
+</html>
+
